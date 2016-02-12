@@ -1,0 +1,30 @@
+﻿.text-site {
+    color: #B40404;
+}
+
+.form-control:focus {
+    color: #B40404 !important;
+}
+
+.pesquisaHome {
+    background-color: #A41F20;
+    /*opacity: 0.85;
+    -moz-opacity: 0.85;
+    filter: alpha(opacity=85);
+    margin: 8% 0;*/
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    /*background-image: url(../Imagens/fundoHome.jpg);*/
+}
+
+.notPadding {
+    padding: 0 !important;
+}
+
+.paddingCard {
+    padding: 5px !important;
+}
+
+.logoCard {
+    width: 100%;
+}

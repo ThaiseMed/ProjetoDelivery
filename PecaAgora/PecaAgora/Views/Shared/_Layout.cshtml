@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Peça Agora</title>
+    @Styles.Render("~/Content/css")
+
+
+</head>
+<body id="top" class="scrollspy">
+
+
+    <div class="navbar-fixed" style="background-image: url(../../Imagens/fundoHome.jpg)">
+        <nav id="nav_f" class="default_color" role="navigation">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="@Url.Action("Index", "Home")" id="logo-container" class="brand-logo">PEÇA AGORA</a>
+                    <ul class="right hide-on-med-and-down">
+                        @*<li class="dropdown">
+                            <a class="dropdown-toggle ink-reaction" aria-expanded="true" href="javascript:void(0);" data-toggle="dropdown">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu animation-dock">
+                                <li><a href="../../html/pages/profile.html">My profile</a></li>
+                                <li><a href="../../html/pages/blog/post.html">My blog <span class="badge style-danger pull-right">16</span></a></li>
+                                <li><a href="../../html/pages/calendar.html">My appointments</a></li>
+                                <li><a href="../../html/pages/calendar.html">My appointments</a></li>
+                                <li><a href="../../html/pages/locked.html"><i class="fa fa-fw fa-lock"></i> Lock</a></li>
+                                <li><a href="../../html/pages/login.html"><i class="fa fa-fw fa-power-off text-danger"></i> Logout</a></li>
+                            </ul>
+                        </li>*@
+                        <li><a href="#cadastrar">Cadastrar</a></li>
+                        <li><a href="@Url.Action("Index", "Login")">Entrar</a></li>
+                    </ul>
+                    <ul id="nav-mobile" class="side-nav">
+                        <li><a href="#cadastrar">Cadastrar</a></li>
+                        <li><a href="@Url.Action("Index", "Login")">Entrar</a></li>
+                    </ul>
+                    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- END HEADER-->
+
+    @RenderBody()
+
+    <footer id="contact" class="page-footer default_color scrollspy">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <form class="col s12" action="contact.php" method="post">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="md md-account-circle prefix white-text"></i>
+                                <input id="icon_prefix" name="name" type="text" class="validate white-text">
+                                <label for="icon_prefix" class="white-text">Nome</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="md md-email  prefix white-text"></i>
+                                <input id="icon_email" name="email" type="email" class="validate white-text">
+                                <label for="icon_email" class="white-text">Email</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <i class="md md-create prefix white-text"></i>
+                                <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
+                                <label for="icon_prefix2" class="white-text">Mensagem</label>
+                            </div>
+                            <div class="col offset-s7 s5">
+                                <button class="btn waves-effect waves-light red darken-1" type="submit">
+                                    Enviar
+                                    <i class="mdi-content-send right white-text"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Thaise Medeiros</h5>
+                    @*<ul>
+                            <li><a class="white-text" href="http://www.joashpereira.com/">Home</a></li>
+                            <li><a class="white-text" href="http://www.joashpereira.com/blog">Blog</a></li>
+                        </ul>*@
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Social</h5>
+                    <ul>
+                        <li>
+                            <a class="white-text" href="https://www.behance.net/joashp">
+                                <i class="small fa fa-behance-square white-text"></i> Behance
+                            </a>
+                        </li>
+                        <li>
+                            <a class="white-text" href="https://www.facebook.com/joash.c.pereira">
+                                <i class="small fa fa-facebook-square white-text"></i> Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a class="white-text" href="https://github.com/joashp">
+                                <i class="small fa fa-github-square white-text"></i> Github
+                            </a>
+                        </li>
+                        <li>
+                            <a class="white-text" href="https://www.linkedin.com/in/joashp">
+                                <i class="small fa fa-linkedin-square white-text"></i> Linkedin
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright default_color">
+            <div class="container">
+                Desenvolvido por <a class="white-text" href="#">Thaise Medeiros</a>.
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/landingPage")
+    @Scripts.Render("~/bundles/common")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
